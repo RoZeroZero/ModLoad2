@@ -225,58 +225,52 @@
   <data name="&gt;&gt;progressBar1.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="listBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left</value>
-  </data>
-  <data name="listBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="listBox1.HorizontalScrollbar" type="System.Boolean, mscorlib">
+  <data name="NameBox.HorizontalScrollbar" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 25</value>
+  <data name="NameBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 25</value>
   </data>
-  <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 95</value>
+  <data name="NameBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 108</value>
   </data>
-  <data name="listBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="NameBox.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
-  <data name="&gt;&gt;listBox1.Name" xml:space="preserve">
-    <value>listBox1</value>
+  <data name="&gt;&gt;NameBox.Name" xml:space="preserve">
+    <value>NameBox</value>
   </data>
-  <data name="&gt;&gt;listBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;NameBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;listBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;NameBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;listBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;NameBox.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="listBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="DescriptionBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
-  <data name="listBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 25</value>
+  <data name="DescriptionBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 25</value>
   </data>
-  <data name="listBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 95</value>
+  <data name="DescriptionBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 108</value>
   </data>
-  <data name="listBox2.TabIndex" type="System.Int32, mscorlib">
+  <data name="DescriptionBox.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;listBox2.Name" xml:space="preserve">
-    <value>listBox2</value>
+  <data name="&gt;&gt;DescriptionBox.Name" xml:space="preserve">
+    <value>DescriptionBox</value>
   </data>
-  <data name="&gt;&gt;listBox2.Type" xml:space="preserve">
+  <data name="&gt;&gt;DescriptionBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;listBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;DescriptionBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;listBox2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DescriptionBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="textBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -334,7 +328,7 @@
     <value>True</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 9</value>
+    <value>155, 9</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
@@ -409,10 +403,13 @@
     <value>0</value>
   </data>
   <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>155, 21</value>
+    <value>12, 12</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>45</value>
   </metadata>
   <data name="$this.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

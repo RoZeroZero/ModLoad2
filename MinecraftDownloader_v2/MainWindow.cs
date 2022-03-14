@@ -15,10 +15,7 @@ namespace MinecraftDownloader_v2
         {
 
         }
-        private void Cancel_Click(object sender, EventArgs e)
-        {
 
-        }
         private void Install_Click(object sender, EventArgs e)
         {
 
@@ -36,16 +33,24 @@ namespace MinecraftDownloader_v2
         }
         private void GetVersions()
         {
-            //Uri pathMeta = new Uri("https://wdfiles.ru/folder/8343/modpacks/meta");
-            Uri pathMeta = new Uri("https://wdfiles.ru/f12966");
+            Uri pathMeta = new Uri("https://raw.github.com/RoZeroZero/modpacks-archives-meta/main/");
             string pathVersions = "versions.txt";
             WebClient client = new WebClient();
-            client.DownloadFile(pathMeta, pathVersions);
+            client.DownloadFile((pathMeta+pathVersions), pathVersions);
+            NameBox.Items.Clear();
             StreamReader reader = new StreamReader(pathVersions);
-            string strVersions = reader.ReadToEnd();
-            listBox1.Items.Clear();
-            listBox1.Items.Add(strVersions);
+            string strVersions;
+            while ((strVersions = reader.ReadLine()) != null)
+            {
+                string[] str = strVersions.Split(new char[] { '@' });
+                NameBox.Items.Add(str[0]);
+            }
+            DescriptionBox.Cursor = Cursors.WaitCursor;
             reader.Close();
+        }
+        private void NameBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DescriptionBox.Cursor = NameBox.SelectedIndex >= 0 ? Cursors.Default : Cursors.WaitCursor;
         }
     }
 }
