@@ -15,6 +15,7 @@ namespace MinecraftDownloader_v2
         {
 
         }
+
         private void Install_Click(object sender, EventArgs e)
         {
 

@@ -33,8 +33,10 @@
             this.PathInsert = new System.Windows.Forms.Button();
             this.Refresh = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+
             this.NameBox = new System.Windows.Forms.ListBox();
             this.DescriptionBox = new System.Windows.Forms.ListBox();
+
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,6 +72,7 @@
             resources.ApplyResources(this.progressBar1, "progressBar1");
             this.progressBar1.Name = "progressBar1";
             // 
+
             // NameBox
             // 
             this.NameBox.BackColor = System.Drawing.SystemColors.Menu;
@@ -85,6 +88,7 @@
             this.DescriptionBox.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.DescriptionBox.FormattingEnabled = true;
             this.DescriptionBox.Name = "DescriptionBox";
+
             // 
             // textBox1
             // 
@@ -122,8 +126,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
+
             this.Controls.Add(this.DescriptionBox);
             this.Controls.Add(this.NameBox);
+
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.Refresh);
             this.Controls.Add(this.PathInsert);
@@ -141,8 +147,10 @@
         private System.Windows.Forms.Button PathInsert;
         private System.Windows.Forms.Button Refresh;
         private System.Windows.Forms.ProgressBar progressBar1;
+
         private System.Windows.Forms.ListBox NameBox;
         private System.Windows.Forms.ListBox DescriptionBox;
+
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
