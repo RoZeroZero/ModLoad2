@@ -33,8 +33,8 @@
             this.PathInsert = new System.Windows.Forms.Button();
             this.Refresh = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.NameBox = new System.Windows.Forms.ListBox();
+            this.DescriptionBox = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,20 +70,21 @@
             resources.ApplyResources(this.progressBar1, "progressBar1");
             this.progressBar1.Name = "progressBar1";
             // 
-            // listBox1
+            // NameBox
             // 
-            resources.ApplyResources(this.listBox1, "listBox1");
-            this.listBox1.BackColor = System.Drawing.SystemColors.Menu;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Name = "listBox1";
+            this.NameBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.NameBox.FormattingEnabled = true;
+            resources.ApplyResources(this.NameBox, "NameBox");
+            this.NameBox.Name = "NameBox";
+            this.NameBox.SelectedIndexChanged += new System.EventHandler(this.NameBox_SelectedIndexChanged);
             // 
-            // listBox2
+            // DescriptionBox
             // 
-            resources.ApplyResources(this.listBox2, "listBox2");
-            this.listBox2.BackColor = System.Drawing.SystemColors.Menu;
-            this.listBox2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Name = "listBox2";
+            resources.ApplyResources(this.DescriptionBox, "DescriptionBox");
+            this.DescriptionBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.DescriptionBox.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.DescriptionBox.FormattingEnabled = true;
+            this.DescriptionBox.Name = "DescriptionBox";
             // 
             // textBox1
             // 
@@ -121,8 +122,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.DescriptionBox);
+            this.Controls.Add(this.NameBox);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.Refresh);
             this.Controls.Add(this.PathInsert);
@@ -140,8 +141,8 @@
         private System.Windows.Forms.Button PathInsert;
         private System.Windows.Forms.Button Refresh;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox NameBox;
+        private System.Windows.Forms.ListBox DescriptionBox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
