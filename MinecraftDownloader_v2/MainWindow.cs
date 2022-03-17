@@ -13,6 +13,7 @@ namespace MinecraftDownloader_v2
         readonly string pathMain = "https://github.com/RoZeroZero/modpacks-archives-meta/raw/main/";
         readonly string pathVersions = "versions.txt";
         string pathModpack;
+        string strVersions;
 
         public MainWindow() => InitializeComponent();
         private void MainWindow_Load(object sender, EventArgs e)
@@ -37,12 +38,11 @@ namespace MinecraftDownloader_v2
             WebClient client = new WebClient();
             client.DownloadFile(pathMain+pathVersions, pathVersions);
             NameBox.Items.Clear();
-            StreamReader reader = new StreamReader(pathVersions);
-            string strVersions;
+            StreamReader reader = new StreamReader(pathVersions);            
             while ((strVersions = reader.ReadLine()) != null)
             {
                 string[] str = strVersions.Split(new char[] { '@' });
-                NameBox.Items.Add(str[0].TrimEnd(' '));
+                NameBox.Items.Add(str[0]);
             }
             DescriptionBox.Cursor = Cursors.WaitCursor;
             reader.Close();
@@ -61,11 +61,13 @@ namespace MinecraftDownloader_v2
             {
                 DescriptionBox.Cursor = NameBox.SelectedIndex >= 0 ? Cursors.Default : Cursors.WaitCursor;
                 StreamReader reader = new StreamReader(pathVersions);
-                string strVersions;
                 while ((strVersions = reader.ReadLine()) != null)
                 {
                     string[] str = strVersions.Split(new char[] { '@' });
-                    DescriptionBox.Text = str[1];
+                    if (str[0] == (string)NameBox.SelectedItem)
+                    {
+                        DescriptionBox.Text = str[1];
+                    }
                 }
                 reader.Close();
             }
@@ -84,11 +86,6 @@ namespace MinecraftDownloader_v2
                 ZipFile.ExtractToDirectory(pathModpack+".zip", pathSelected);
                 label3.Text = "Description";
             }            
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

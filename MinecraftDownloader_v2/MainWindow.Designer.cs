@@ -140,7 +140,7 @@
         #endregion
         private System.Windows.Forms.Button Install;
         private System.Windows.Forms.Button PathInsert;
-        private System.Windows.Forms.Button Refresh;
+        private new System.Windows.Forms.Button Refresh;
         private System.Windows.Forms.ProgressBar Bar;
 
         private System.Windows.Forms.ListBox NameBox;
