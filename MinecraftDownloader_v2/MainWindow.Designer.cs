@@ -103,7 +103,7 @@
             // 
             this.DescriptionBox.BackColor = System.Drawing.SystemColors.Menu;
             this.DescriptionBox.CausesValidation = false;
-            this.DescriptionBox.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.DescriptionBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             resources.ApplyResources(this.DescriptionBox, "DescriptionBox");
             this.DescriptionBox.Name = "DescriptionBox";
             this.DescriptionBox.ReadOnly = true;

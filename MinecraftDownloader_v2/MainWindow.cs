@@ -44,8 +44,8 @@ namespace MinecraftDownloader_v2
                 string[] str = strVersions.Split(new char[] { '@' });
                 NameBox.Items.Add(str[0]);
             }
-            DescriptionBox.Cursor = Cursors.WaitCursor;
             reader.Close();
+            FlashWindow.Flash(this);
         }
         private void PathInsert_Click(object sender, EventArgs e)
         {
@@ -74,18 +74,22 @@ namespace MinecraftDownloader_v2
         }
         private void DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            Bar.Maximum = (int)e.TotalBytesToReceive / 100;
-            Bar.Value = (int)e.BytesReceived / 100 == (int)e.TotalBytesToReceive / 100 ? 0 : (int)e.BytesReceived / 100;
+            int totalBytes = (int)e.TotalBytesToReceive / 100;           
+            int receivedBytes = (int)e.BytesReceived / 100;
+            Bar.Maximum = totalBytes;
+            Bar.Value = receivedBytes == totalBytes ? 0 : receivedBytes;
+            TaskbarProgress.SetValue(System.Diagnostics.Process.GetCurrentProcess().MainWindowHandle, (receivedBytes == totalBytes ? 0 : receivedBytes), totalBytes);
         }
         private void DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            if (Directory.Exists(pathSelected + "\\.minecraft\\versions" + pathModpack)) { Directory.Delete(pathSelected + pathModpack); }
-            else 
+            if (Directory.Exists(pathSelected + "\\" + pathModpack)) 
             {
-                label3.Text = "Extracting";
-                ZipFile.ExtractToDirectory(pathModpack+".zip", pathSelected);
-                label3.Text = "Description";
-            }            
+                label3.Text = "Directory exists. Deleting...";
+                Directory.Delete(pathSelected + "\\" + pathModpack, true); 
+            }
+            ZipFile.ExtractToDirectory(pathModpack + ".zip", pathSelected);
+            label3.Text = "Description";
+            FlashWindow.Flash(this);
         }
     }
 }

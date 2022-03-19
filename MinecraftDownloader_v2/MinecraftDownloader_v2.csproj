@@ -112,6 +112,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FlashWindow.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +121,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaskbarProgress.cs" />
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,7 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ico.ico" />
-    <Content Include="zev8vhe9vy151.ico" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="Grpc.Core">
