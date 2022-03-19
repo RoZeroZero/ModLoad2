@@ -32,18 +32,17 @@
             this.Install = new System.Windows.Forms.Button();
             this.PathInsert = new System.Windows.Forms.Button();
             this.Refresh = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
 
+            this.Bar = new System.Windows.Forms.ProgressBar();
             this.NameBox = new System.Windows.Forms.ListBox();
-            this.DescriptionBox = new System.Windows.Forms.ListBox();
+            this.PathBox = new System.Windows.Forms.TextBox();
 
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.DescriptionBox = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // Install
@@ -67,12 +66,11 @@
             this.Refresh.UseVisualStyleBackColor = true;
             this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
             // 
-            // progressBar1
+            // Bar
             // 
-            resources.ApplyResources(this.progressBar1, "progressBar1");
-            this.progressBar1.Name = "progressBar1";
+            resources.ApplyResources(this.Bar, "Bar");
+            this.Bar.Name = "Bar";
             // 
-
             // NameBox
             // 
             this.NameBox.BackColor = System.Drawing.SystemColors.Menu;
@@ -81,19 +79,13 @@
             this.NameBox.Name = "NameBox";
             this.NameBox.SelectedIndexChanged += new System.EventHandler(this.NameBox_SelectedIndexChanged);
             // 
-            // DescriptionBox
-            // 
-            resources.ApplyResources(this.DescriptionBox, "DescriptionBox");
-            this.DescriptionBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.DescriptionBox.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.DescriptionBox.FormattingEnabled = true;
-            this.DescriptionBox.Name = "DescriptionBox";
 
+            // PathBox
             // 
-            // textBox1
-            // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            resources.ApplyResources(this.PathBox, "PathBox");
+            this.PathBox.Name = "PathBox";
+            this.PathBox.ReadOnly = true;
+
             // 
             // label2
             // 
@@ -105,38 +97,47 @@
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label1.Name = "label1";
             // 
+            // DescriptionBox
+            // 
+            this.DescriptionBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.DescriptionBox.CausesValidation = false;
+            this.DescriptionBox.Cursor = System.Windows.Forms.Cursors.Arrow;
+            resources.ApplyResources(this.DescriptionBox, "DescriptionBox");
+            this.DescriptionBox.Name = "DescriptionBox";
+            this.DescriptionBox.ReadOnly = true;
+            this.DescriptionBox.TabStop = false;
+            // 
+            // panel1
+            // 
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
             // MainWindow
             // 
             this.AcceptButton = this.Install;
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.DescriptionBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
 
-            this.Controls.Add(this.DescriptionBox);
+            this.Controls.Add(this.PathBox);
             this.Controls.Add(this.NameBox);
+            this.Controls.Add(this.Bar);
 
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.Refresh);
             this.Controls.Add(this.PathInsert);
             this.Controls.Add(this.Install);
             this.MaximizeBox = false;
             this.Name = "MainWindow";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,18 +146,20 @@
         #endregion
         private System.Windows.Forms.Button Install;
         private System.Windows.Forms.Button PathInsert;
-        private System.Windows.Forms.Button Refresh;
-        private System.Windows.Forms.ProgressBar progressBar1;
+
+        private new System.Windows.Forms.Button Refresh;
+        private System.Windows.Forms.ProgressBar Bar;
 
         private System.Windows.Forms.ListBox NameBox;
-        private System.Windows.Forms.ListBox DescriptionBox;
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PathBox;
+
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.TextBox DescriptionBox;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
