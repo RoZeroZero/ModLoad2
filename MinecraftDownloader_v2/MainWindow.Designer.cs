@@ -32,9 +32,11 @@
             this.Install = new System.Windows.Forms.Button();
             this.PathInsert = new System.Windows.Forms.Button();
             this.Refresh = new System.Windows.Forms.Button();
+
             this.Bar = new System.Windows.Forms.ProgressBar();
             this.NameBox = new System.Windows.Forms.ListBox();
             this.PathBox = new System.Windows.Forms.TextBox();
+
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -77,11 +79,13 @@
             this.NameBox.Name = "NameBox";
             this.NameBox.SelectedIndexChanged += new System.EventHandler(this.NameBox_SelectedIndexChanged);
             // 
+
             // PathBox
             // 
             resources.ApplyResources(this.PathBox, "PathBox");
             this.PathBox.Name = "PathBox";
             this.PathBox.ReadOnly = true;
+
             // 
             // label2
             // 
@@ -123,9 +127,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+
             this.Controls.Add(this.PathBox);
             this.Controls.Add(this.NameBox);
             this.Controls.Add(this.Bar);
+
             this.Controls.Add(this.Refresh);
             this.Controls.Add(this.PathInsert);
             this.Controls.Add(this.Install);
@@ -140,12 +146,14 @@
         #endregion
         private System.Windows.Forms.Button Install;
         private System.Windows.Forms.Button PathInsert;
+
         private new System.Windows.Forms.Button Refresh;
         private System.Windows.Forms.ProgressBar Bar;
 
         private System.Windows.Forms.ListBox NameBox;
 
         private System.Windows.Forms.TextBox PathBox;
+
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;

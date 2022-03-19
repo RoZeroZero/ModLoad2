@@ -15,11 +15,13 @@ namespace MinecraftDownloader_v2
         string pathModpack;
         string strVersions;
 
+
         public MainWindow() => InitializeComponent();
         private void MainWindow_Load(object sender, EventArgs e)
         {
             PathBox.Text = pathSelected;
         }
+
         private void Install_Click(object sender, EventArgs e)
         {
             if  (NameBox.SelectedIndex>=0)
@@ -57,6 +59,7 @@ namespace MinecraftDownloader_v2
         }
         private void NameBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             if (NameBox.SelectedIndex != -1)
             {
                 DescriptionBox.Cursor = NameBox.SelectedIndex >= 0 ? Cursors.Default : Cursors.WaitCursor;
@@ -90,6 +93,11 @@ namespace MinecraftDownloader_v2
             ZipFile.ExtractToDirectory(pathModpack + ".zip", pathSelected);
             label3.Text = "Description";
             FlashWindow.Flash(this);
+
+        }
+        private void NameBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DescriptionBox.Cursor = NameBox.SelectedIndex >= 0 ? Cursors.Default : Cursors.WaitCursor;
         }
     }
 }
