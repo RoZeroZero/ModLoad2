@@ -51,7 +51,7 @@ namespace MinecraftDownloader_v2
         }
         private void PathInsert_Click(object sender, EventArgs e)
         {
-            folderBrowserDialog1.RootFolder = Environment.SpecialFolder.ApplicationData; ;
+            //folderBrowserDialog1.RootFolder = Environment.SpecialFolder.ApplicationData;
             if (folderBrowserDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
             pathSelected = folderBrowserDialog1.SelectedPath;
@@ -69,6 +69,7 @@ namespace MinecraftDownloader_v2
                     string[] str = strVersions.Split(new char[] { '@' });
                     if (str[0] == (string)NameBox.SelectedItem)
                     {
+                        uriModpack = "https://www.dropbox.com/s/" + str[1] + "?dl=1";
                         DescriptionBox.Text = str[2];
                     }
                 }
