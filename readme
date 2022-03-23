@@ -1,0 +1,17 @@
+Инструкция по установке:
+Пункт 1: Скачать и запустить TLauncher.
+Пункт 2: Утановить Java x64 (https://www.java.com/ru/).
+Пункт 3: Скачать и запустить последний релиз ML2 (ModpackLoader), перед установкой выбрать требуемую версию и путь установки (не менять, если TLauncher использует путь по умолчанию).
+Пункт 4: После окончанию загрузки закрыть ML2, обновить версии в TLauncher (значок перезагрузки или перезапуск лаунчера). 
+Пункт 5: Выделить необходимый для сборки объем ОЗУ (иконка настроек - настройки - выделение памяти).
+Пункт 6: Запустить майнкрафт!
+
+###
+
+Installation instructions:
+Step 1: Download and run TLauncher.
+Step 2: Install Java x64 (https://www.java.com/ru/).
+Step 3: Download and run the latest release of ML2 (ModpackLoader), before installing, select the required version and installation path (do not change if TLauncher uses the default path).
+Step 4: After the download is complete, close ML2, update the versions in TLauncher (reload icon or restart launcher).
+Step 5: Select the amount of RAM necessary for the assembly (settings icon - settings - memory allocation).
+Step 6: Launch minecraft!
